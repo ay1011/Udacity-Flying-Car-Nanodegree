@@ -1,53 +1,44 @@
-# FCND-Term1-Starter-Kit
+# Udacity Flying Car Nanodegree
 
-Starter kit for FCND Term 1. Python 3 is used for the entirety of term 1.
-
-Packages used:
-
-* [`matplotlib`](https://matplotlib.org/)
-* [`jupyter`](http://jupyter.org/)
-* [`udacidrone`](https://github.com/udacity/udacidrone). Due to `udacidrone` being updated as the ND progresses, it's recommended for new projects you update udacidrone with `pip install --upgrade udacidrone`.
-* [`visdom`](https://github.com/facebookresearch/visdom/)
+[![Udacity - Fly Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/flying-car-nanodegree--nd787)
 
 
-The recommended way to get up and running:
 
-## [Anaconda Environment](docs/configure_via_anaconda.md)
+## Projects
 
-Get started [here](docs/configure_via_anaconda.md). More info [here](http://conda.pydata.org/docs/).
+![TBD...](doc/gif/Crazyfly.gif)
 
-Supported Sytems: MacOS, Windows, Linux
 
-## Troubleshooting
+### 1. Backyard Flyer
+**Description:** Set up a state machine using event-driven programming to make [udacidrone](https://github.com/udacity/udacidrone) fly autonomously in a square shape. The pupose of this project is to get familiar with sending commands and receiving incoming data from the drone. The required task is to command the drone to fly a 10 meter box at a 3 meter altitude. Since communication with the drone is done using MAVLink, the code can potentially be used to control an PX4 quadcopter autopilot with minimal modification.
 
-**NOTE:** If `future` is not installed prior to `pymavlink` this will output an error message similar to the following:
+**Code**: [backyard_flyer.py](projects/backyard_flyer/backyard_flyer.py)
 
+**Result**:
+
+![backyard flyer](doc/gif/backyard_flyer.gif)
+
+## Environment Setup
+1. Download and install [miniconda3](https://conda.io/miniconda.html).
+2. Clone the repository and then navigate to `FCND-Term1-Starter-Kit` submodule:
+```bash
+git clone --recursive https://github.com/pyadmell/flying-car-udacity.git
+
+cd ext/udacity/FCND-Term1-Starter-Kit
 ```
-  # omitted Traceback
-  ModuleNotFoundError: No module named 'future'
-  
-  ----------------------------------------
-  Failed building wheel for pymavlink
-  Running setup.py clean for pymavlink
-Failed to build pymavlink
-Installing collected packages: torchfile, pillow, idna, chardet, urllib3, requests, visdom, future, lxml, pymavlink, utm, websockets, uvloop, udacidrone
-  Running setup.py install for pymavlink ... done
-  Running setup.py install for udacidrone ... done
-Successfully installed chardet-3.0.4 future-0.16.0 idna-2.6 lxml-4.1.1 pillow-5.0.0 pymavlink-2.2.8 requests-2.18.4 torchfile-0.1.0 udacidrone-0.1.0 urllib3-1.22 utm-0.4.2 uvloop-0.9.1 visdom-0.1.7 websockets-4.0.1
+3. Create the miniconda environment:
+```bash
+conda env create -f environment.yml
 ```
-
-If the output is `Successfully installed ... pymavlink ..` it's likely the install is fine. You can check by running:
-
+4. Verify the fcnd environment:
+```bahs
+conda info --envs
 ```
-python -c "import pymavlink"
+5. Clean up downloaded packages:
+```bash
+conda clean -tp
 ```
-
-if the install was successful there should be no output.
-
-**NOTE:** If you're on MacOS you'll need to install developer tools to install `pymavlink`. You can do this by typing the following into a shell:
-
+6. Activate `fcnd` conda environment:
+```bash
+source activate fcnd
 ```
-xcode-select --install
-```
-
-**NOTE:** On Windows you may need to open a terminal/powershell as an administrator. This can be done by right-clicking the program and selecting "Run as Administrator".
