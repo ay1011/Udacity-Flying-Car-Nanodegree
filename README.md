@@ -20,8 +20,7 @@
 1. Download and install [miniconda3](https://conda.io/miniconda.html).
 2. Clone the repository and then navigate to `FCND-Term1-Starter-Kit` submodule:
 ```bash
-git clone --recursive https://https://github.com/ay1011/Udacity-Flying-Car-Nanodegree.git
-
+git clone https://github.com/udacity/FCND-Backyard-Flyer.git
 cd FCND-Term1-Starter-Kit
 ```
 3. Create the miniconda environment:
