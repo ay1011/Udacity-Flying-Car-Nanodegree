@@ -8,7 +8,7 @@
 
 
 ### 1. Backyard Flyer
-**Description:** Set up a state machine using event-driven programming to make [udacidrone](https://github.com/udacity/udacidrone) fly autonomously in a square shape. The pupose of this project is to get familiar with sending commands and receiving incoming data from the drone. The required task is to command the drone to fly a 10 meter box at a 3 meter altitude. Since communication with the drone is done using MAVLink, the code can potentially be used to control an PX4 quadcopter autopilot with minimal modification.
+**Description:** Set up a state machine using event-driven programming to make [udacidrone](https://github.com/udacity/udacidrone) fly autonomously in a square shape.
 
 **Code**: [backyard_flyer.py](/FCND-Backyard-Flyer/backyard_flyer.py)
 
